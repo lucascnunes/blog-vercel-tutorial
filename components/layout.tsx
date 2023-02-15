@@ -8,7 +8,12 @@ import styles from "./layout.module.css";
 const name = "Lucas Nunes";
 export const siteTitle = "Next.js Sample Website";
 
-export default function Layout({ children, home }) {
+interface LayoutTypes {
+  children: React.ReactNode;
+  home?: boolean;
+}
+
+export default function Layout({ children, home }: LayoutTypes) {
   return (
     <div className={styles.container}>
       <Head>
